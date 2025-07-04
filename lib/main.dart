@@ -30,13 +30,14 @@ class _FireworksState extends State<Fireworks>
           0,
           random.nextDouble(),
           random.nextDouble(),
-          Color(random.nextInt(0x1000000 | 0xFF000000)),
+          Color(random.nextInt(0x1000000) | 0xFF000000),
         ));
       }
       List<Firework> newFireworks = [];
       setState(() {
         for (Firework firework in fireworks) {
-          if (random.nextInt(30) == 0) {
+          print(firework.$4);
+          if (random.nextInt(40) == 0) {
             continue;
           }
           newFireworks.add((
